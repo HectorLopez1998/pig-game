@@ -1,4 +1,6 @@
 'use strict';
+const player0El = document.querySelector('.player--0');
+const player1El = document.querySelector('.player--1');
 let score0El = document.querySelector('#score--0');
 let score1El = document.getElementById('score--1'); //supposed to be a little bit faster than querySelector.
 const current01El = document.querySelector('#current--0');
@@ -27,6 +29,9 @@ btnRoll.addEventListener('click', function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0
     currentScore = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
+    player0El.classList.toggle('player--active')
+    player1El.classList.toggle('player--active')
+
   }
   // if (activePlayer === 0) {
   //   activePlayer = 1
